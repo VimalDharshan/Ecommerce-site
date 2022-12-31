@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Mainpage.css">
+        <link rel="stylesheet" href="Feedbackform.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Feedback</title>
+        <link rel="shortcut icon" href="clogo.jpg" type="image/x-icon"/>
+        </head>
+    <body>
+        <nav>
+            <a class="clogo" href="Mainpage.html" >eToolz</a>
+            <ul type="none">
+                
+                <li><a href="Mainpage.html" style="text-decoration:none">Home</a></li>
+                <li><a href="Aboutus.html" style="text-decoration:none">About Us</a></li>
+                <li><a href="Login.html" style="text-decoration:none">Login</a></li>
+                <li><a href="Feedbackform.html" style="text-decoration:none">Feedback</a></li>
+            </ul>
+        </nav>
+        <form class="form-box">
+            <h1>Give your Feedback</h1>
+            <div class="ins">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="name" placeholder="Enter your name..." required>
+            </div>
+            <div class="ins">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" placeholder="Enter your E-mail address..." required>
+            </div>
+            <div class="ins">
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+            <input type="number" name="number" placeholder="Enter your phone number..." required >
+            </div>
+            <div class="ins">
+            <textarea  name="message" placeholder="Enter your comments..." rows="10" cols="60"></textarea>
+            </div>
+            <br>
+            <input class="clear" name="clear" type="reset" value="Clear">
+            <input class="submit" name="submit" type="submit" value="Submit">
+        </form>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h1>Company</h1>
+                        <ul class="part1" type="none">
+                            <li><a href="Aboutus.html" style="text-decoration:none">About Us</a></li>
+                            <li><a href="#" style="text-decoration:none">Our Srvices</a></li>
+                            <li><a href="#" style="text-decoration:none">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <ul class="part2" type="none">
+                            <h1>FAQ</h1>
+                            <li><a href="#" style="text-decoration:none">Shipping</a></li>
+                            <li><a href="#" style="text-decoration:none">Returns</a></li>
+                            <li><a href="#" style="text-decoration:none">Payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h1>Follow us</h1>
+                        <div class="social-links">
+                        <ul class="part3" type="none">
+                            <li><a href="https://facebook.com/vimaldharshan/"  type="_blank" style="text-decoration:none"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" type="_blank" style="text-decoration:none"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/achanta.saikrishna/" type="_blank" style="text-decoration:none"><i class="fab fa-instagram"></i></a></li>
+                        </ul>  
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzk6eWNKtuCG3U2wBuCYzhu0R5Rbiiz8LqZSGVmkvV3FJKDy7fGcMMtxjplHwKRWXxW/exec'
+            const form = document.forms['feedback-data']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+    </body>
+</html>

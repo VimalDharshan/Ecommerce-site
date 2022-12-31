@@ -1,0 +1,77 @@
+form{ 
+    width: 500px;
+    height: 600px;
+    margin: 100px 800px;
+    text-decoration: solid;
+    font-size: large;
+    font-weight: 200;   
+    background-color: #fff;    
+    padding: 12px 20px; 
+    text-align: center;
+   border-radius: 40px;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #9b72dd;
+    position: relative;
+}
+.form-box h1::after{
+    content: '';
+    width: 150px;
+    height: 4px;
+    border-radius: 3px;
+    background: #9b72dd;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.linput{
+    background:#eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+input{
+    width:100%;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.ins{
+    background:white;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+.submit
+{
+    background-color: rgb(54, 220, 54);
+    margin: 20px 15px 10px 15px;
+    height: 35px;
+    width: 60px;
+    Border-top-right-radius: 20px 10px;
+}
+.clear{
+    background-color: red;
+    margin: 20px 15px 10px 15px;
+    height: 35px;
+    width: 60px;
+    Border-top-right-radius: 20px 10px;
+}
+
+body{
+   
+    background-image: url(feedback.jpg);
+    background-size: cover;
+}
+form input:focus,
+form textarea:focus{
+    border: 4px solid  rgb(88, 227, 109);
+    color:   rgb(14, 14, 14);
+    transition: all 0.3s ease;
+}
